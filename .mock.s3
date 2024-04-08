@@ -1,0 +1,58 @@
+```s3://my-bucket/david/name.json
+{
+    "first": "David",
+    "middle": "Maxwell",
+    "last": "Sillman"
+}
+```
+
+```s3://my-bucket/david/eyes.json
+{
+    "color": {
+        "iris": "green",
+        "sclera": "white
+    },
+    "shape": "spherical"
+}
+```
+```s3://my-bucket/david/location.json
+{
+    "city": "Woburn",
+    "state": "MA",
+    "country": "USA
+}
+```
+
+```s3://my-bucket/jacob/name.json
+{
+    "first": "Jacob",
+    "middle": "Louis",
+    "last": "Sillman"
+}
+```
+
+```s3://my-bucket/jacob/eyes.json
+{
+    "color": {
+        "iris": "green",
+        "sclera": "white"
+    },
+    "shape": "spherical"
+}
+```
+
+```s3://my-bucket/jacob/location.json
+{
+    "city": "Woburn",
+    "state": "MA",
+    "country": "USA"
+}
+```
+
+```s3://test-bucket/data1.txt
+Some data part one.
+```
+
+```s3://test-bucket/data2.txt
+Some more data part two!
+```

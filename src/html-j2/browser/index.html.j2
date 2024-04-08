@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    {% include "browser/head.html.j2" %}
+</head>
+
+{% set bucket = s3.bucket(bucket_name) %}
+
+<body>
+    <div class="pane-container">
+        <div class="top-pane">
+            <h1>s3://{{ bucket.name }}/{{ cwd }}</h1>
+        </div>
+        <div class="bottom-pane">
+            <div class="left-pane">
+                <p><a href="..">../</a></p>
+                {% for dir in s3.get_dirs_in(bucket.name, cwd) %}
+                <p><a href="{{ dir }}">{{ dir }}</a></p>
+                {% endfor %}
+                {% for file in s3.get_objects_in(bucket.name, cwd) %}
+                <p><a>{{ file.Key.removeprefix(cwd) }}</a></p>
+                {% endfor %}
+            </div>
+            <div class="right-pane">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

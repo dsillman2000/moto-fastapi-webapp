@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    {% include "buckets/head.html.j2" %}
+</head>
+
+<body>
+    <h1>s3://</h1>
+    <div class="bucket-selector">
+        <table>
+            <tr>
+                <th style="width: 70%"">Bucket Name</th>
+                <th style=" width: 30%">Creation Date</th>
+            </tr>
+            {% for bucket in s3.buckets %}
+            <tr>
+                <td><a href="buckets/{{ bucket.name }}/">{{ bucket.name }}</a></td>
+                <td>{{ bucket.creation_date }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
